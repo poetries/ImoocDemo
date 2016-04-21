@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>日期对象 </title>
+<script type="text/javascript">
+ var mydate=new Date();
+  document.write("当前时间："+mydate+"<br>");
+  mydate.setTime( mydate.getTime()  + 2* 60 * 60 * 1000);
+  document.write("推迟二小时时间：" + mydate);
+</script>
+</head>
+<body>
+
+/*
+get/setTime() 返回/设置时间，单位毫秒数，计算从 1970 年 1 月 1 日零时到日期对象所指的日期的毫秒数。
+
+如果将目前日期对象的时间推迟1小时，代码如下:
+
+  var mydate=new Date();
+  document.write("当前时间："+mydate+"<br>");
+  mydate.setTime(mydate.getTime() + 60 * 60 * 1000);
+  document.write("推迟一小时时间：" + mydate);
+
+结果:
+
+当前时间：Thu Mar 6 11:46:27 UTC+0800 2014
+
+推迟一小时时间：Thu Mar 6 12:46:27 UTC+0800 2014
+
+注意:1. 一小时 60 分，一分 60 秒，一秒 1000 毫秒
+
+      2. 时间推迟 1 小时,就是: “x.setTime(x.getTime() + 60 * 60 * 1000);”
+
+**/
+</body>
+</html>
