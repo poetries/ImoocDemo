@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<!--调整前-->
+<!--
+<div id="con">
+  <p>javascript</p>
+  <div>jQuery</div>
+  <h5>PHP</h5>
+  </div>
+-->
+
+//第一个子节点为什么是#text而不是p呢？
+//因为在非ie浏览器中，空格，及换行符都会被视作是文本节点，所以第一个节//点是<div id="con"> <p>javascript</p>这2个标签之间的空白部分，所以是#text。
+
+<!--调整后-->
+<div id="con"><p>javascript</p><div>jQuery</div><h5>PHP</h5></div> 
+<script type="text/javascript">
+  var x=document.getElementById("con");
+ document.write(x.firstChild.nodeName+" "+x.firstChild.nodeValue+" "+x.firstChild.nodeType+"<br/>");
+ document.write(x.lastChild.nodeName+" "+x.lastChild.nodeValue+" "+x.lastChild.nodeType);
+ 
+ /*
+       访问子结点的第一和最后项
+      一、firstChild 属性返回‘childNodes’数组的第一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。
+      
+      语法：
+      
+      node.firstChild
+      说明：与elementNode.childNodes[0]是同样的效果。 
+      
+      二、 lastChild 属性返回‘childNodes’数组的最后一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。
+      
+      语法：
+      
+      node.lastChild
+      说明：与elementNode.childNodes[elementNode.childNodes.length-1]是同样的效果。 
+      
+      注意: 上一节中，我们知道Internet Explorer 会忽略节点之间生成的空白文本节点，而其它浏览器不会。我们可以通过检测节点类型，过滤子节点。 (以后章节讲解)
+ 
+ */
+</script>
+</body>
+</html>
