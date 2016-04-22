@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+
+.message{    
+	width:200px;
+	height:100px;
+	background-color:#CCC;}
+	
+</style>
+</head>
+<body>
+
+//创建一个P标签，设置className属性，使用createTextNode创建文本节点"I love JavaScript!"
+
+<script type="text/javascript">
+var element = document.createElement("p");
+element.className = "message";
+var textNode = document.createTextNode("I love Javascript");
+element.appendChild(textNode);
+document.body.appendChild(element);
+
+/*
+
+
+  创建文本节点createTextNode
+  createTextNode() 方法创建新的文本节点，返回新创建的 Text 节点。
+  
+  语法：
+  
+  document.createTextNode(data)
+  参数：
+  
+  data : 字符串值，可规定此节点的文本。
+*/
+</script> 
+
+</body>
+</html>
