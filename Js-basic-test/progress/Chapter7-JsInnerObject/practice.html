@@ -1,0 +1,47 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系好安全带,准备启航</title>
+
+<script type="text/javascript">
+
+/**
+第一步：可通过javascript的日期对象来得到当前的日期。
+
+提示:使用Date()日期对象，注意星期返回值为0-6，所以要转成文字"星期X"
+第二步：一长窜的字符串不好弄，找规律后分割放到数组里更好操作哦。
+
+第三步：分割字符串得到分数，然后求和取整。
+
+提示：parseInt() 字符串类型转成整型
+
+*/
+  //通过javascript的日期对象来得到当前的日期，并输出。
+  var myDate = new Date();
+  var weekDays =["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+  
+document.write(myDate.getFullYear() + '年' + myDate.getMonth()+'月'+myDate.getDate()+'日'+weekDays[myDate.getDay()]);
+  
+   
+  //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+  var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+  var scoreArr = sorceStr.split(";");
+
+var sum = 0;
+
+for(var i=0;i<scoreArr.length;i++)
+{
+    sum += parseInt(scoreArr[i].slice(3));
+}
+document.write('<br />'+'该班的总分是：'+sum+'<br />'+'该班的平均分是：'+sum/scoreArr.length)
+
+  //从数组中将成绩撮出来，然后求和取整，并输出。
+  
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
