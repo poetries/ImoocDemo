@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>计时器</title>
+<script type="text/javascript">
+   function clock(){
+      var time=new Date();               	  
+      document.getElementById("clock").value = time;
+   }
+     var i=setInterval("clock()",100);
+     function start(){
+     var i = setInterval("clock()",100)
+     }
+</script>
+
+/*******
+
+取消计时器clearInterval()
+clearInterval() 方法可取消由 setInterval() 设置的交互时间。
+
+语法：clearInterval(id_of_setInterval)
+
+*****/
+</head>
+<body>
+  <form>
+    <input type="text" id="clock" size="50"  />
+    <input type="button" value="Stop" onclick="clearInterval(i)" />
+     <input type="button" value="Start" onclick="start()" />
+  </form>
+</body>
