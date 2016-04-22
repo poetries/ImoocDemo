@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+<body>
+ <script type="text/javascript">
+//方法一
+var w = document.documentElement.offsetWidth;
+var h = document.documentElement.offsetHeight;
+document.write(w+"*"+h+"<br />")
+
+//方法二
+
+var w = document.body.offsetWidth;
+var h = document.body.offsetHeight;
+document.write(w+"*"+h+"<br />")
+
+//浏览器兼容性
+
+var w= document.documentElement.offsetWidth
+    || document.body.offsetWidth;
+var h= document.documentElement.offsetHeight
+    || document.body.offsetHeight;
+document.write(w+"*"+h+"<br />")   
+
+
+/*
+  网页尺寸offsetHeight
+  offsetHeight和offsetWidth，获取网页内容高度和宽度(包括滚动条等边线，会随窗口的显示大小改变)。
+  
+  一、值
+  
+  offsetHeight = clientHeight + 滚动条 + 边框。
+  
+  二、浏览器兼容性
+    
+    var w= document.documentElement.offsetWidth
+        || document.body.offsetWidth;
+    var h= document.documentElement.offsetHeight
+        || document.body.offsetHeight;
+
+*/
+</script>
+</body>
+</html>
