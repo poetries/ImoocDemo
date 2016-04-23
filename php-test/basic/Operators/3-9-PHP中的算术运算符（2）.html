@@ -1,0 +1,18 @@
+<?php 
+     $maxLine = 4; //每排人数
+	 $no = 17;//学生编号
+
+	 $line = ceil($no/$maxLine);
+	 $row = $no%$maxLine? $no%$maxLine:$maxLine;
+
+	 echo "编号<b>".$no."</b>的座位在第<b>".$line."</b>排第<b>".$row."</b>个位置";
+     
+     /*
+1、ceil是天花板的意思，向上取整。是一种函数。
+
+2、这是个三目运算符，（$no%$maxLine），（$no%$maxLine），（$maxLine）分别代表三个值，%是求余运算。这样若（$no%$maxLine）为true,结果显示（$no%$maxLine）,若（$no%$maxLine）为false,则结果显示（$maxLine）
+
+3、三元运算符的原理：(“?:”)三元运算符也是一个比较运算符，对于表达式(expr1)?(expr2):(expr3)，如果expr1的值为true，则此表达式的值为expr2，否则为expr3。
+     
+     */
+?>
