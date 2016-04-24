@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>#id选择器</title>
+        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+    </head>
+    
+    <body>
+        <div id="divtest">div的内容</div>
+        <div id="default"></div>
+        <script type="text/javascript">
+            $("#default").html($("#divtest").html());//在id号为“default”的元素中显示id号为“divtest”元素的内容
+        </script>
+        
+        /*
+           jquery能使用CSS选择器来操作网页中的标签元素。如果你想要通过一个id号去查找一个元素，就可以使用如下格式的选择器：
+
+           $("#my_id")
+
+           其中#my_id表示根据id选择器获取页面中指定的标签元素，且返回唯一一个元素
+        */
+    </body>
+</html>
