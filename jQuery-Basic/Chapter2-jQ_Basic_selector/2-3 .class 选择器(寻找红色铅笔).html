@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>.class选择器</title>
+        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    
+    <body>
+        <div class="red">立正，向我这边看齐</div>
+        <div class="green">我先歇歇脚</div>
+        
+        <script type="text/javascript">
+            var $redHTML = $(".red").html();
+            $(".green").html($redHTML);
+        </script>
+        
+        /*
+          我们在上一小节介绍了通过使用元素名称查询元素的方法，其实，还可以通过元素的类别属性查找元素，就好比在文具盒中要找一个“红色”铅笔一样，
+          根据元素的某个特征进行查找，它的调用格式如下：$(“.class”) 其中.class参数表示元素的CSS类别(类选择器)名称
+        */
+    </body>
+</html>
